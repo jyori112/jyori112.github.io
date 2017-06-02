@@ -1,13 +1,10 @@
-body {
-    background-color: #ccc;
-}
-
 .main {
     margin-top: 50px;
     background-color: #fff;
 }
 
-.profile-pic {
+.profile-pic img {
+    max-width: 100%;
 }
 
 .name {
