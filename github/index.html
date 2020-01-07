@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="http://sakuma.tech/github/">
+    <link rel="../img/favicon.ico">
+
+    
+    <title>Github - Jin SAKUMA</title>
+    
+
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+    <link href="../css/highlight.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    <script src="//ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+    WebFont.load({
+        google: {
+            families: ['Open Sans', 'PT Sans']
+        }
+    });
+    </script>
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="..">Jin SAKUMA</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../publications/">Publications</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Github</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../publications/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="next" >
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#github">GitHubの公開レポジトリ</a></li>
+            <li class="second-level"><a href="#wat2017">WAT2017</a></li>
+                
+            <li class="second-level"><a href="#locally-linear-mapping">Locally linear mapping</a></li>
+                
+            <li class="second-level"><a href="#cross-lingual-model-using-cross-task-embedding-projection">Cross-lingual model using cross-task embedding projection</a></li>
+                
+            <li class="second-level"><a href="#subword-alignment-based-cross-lingual-word-embeddings">Subword alignment based cross-lingual word embeddings</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="github">GitHubの公開レポジトリ</h1>
+<p><a href="https://github.com/jyori112">GitHub</a>で公開しているレポジトリのうちいくつかを紹介します。</p>
+<h2 id="wat2017"><a href="https://github.com/nem6ishi/wat17">WAT2017</a></h2>
+<p>アジア言語の機械翻訳ワークショップでの英日翻訳タスク（shared task）に用いたコード。
+Googleにより開発された<a href="https://github.com/google/seq2seq">seq2seq</a>をもとに実装されている。</p>
+<p>工夫として</p>
+<ul>
+<li>複数モデルのアンサンブルとビームサーチ</li>
+<li>事前学習した単語分散表現による埋め込み層の初期化</li>
+</ul>
+<p>が実装されている。</p>
+<p>実験では、これらの工夫の効果に加えて、学習時のバッチサイズが与える影響についても評価を行った。</p>
+<p><strong>論文</strong>: <a href="https://aclanthology.coli.uni-saarland.de/papers/W17-5708/w17-5708">A Bag of Useful Tricks for Practical Neural Machine Translation: Embedding Layer Initialization and Large Batch Size</a></p>
+<h2 id="locally-linear-mapping"><a href="https://github.com/jyori112/llm">Locally linear mapping</a></h2>
+<p>CoNLL2019において提案した、２つの埋め込み空間を横断する写像（locally linear mapping）の実装。
+２つの空間に共有されている語彙があると仮定し、写像したい単語とその周辺単語との <strong>局所的な関係性</strong> を保持する様に写像先の埋め込みを学習する。</p>
+<p>論文では事前学習した多言語単語分散表現（e.g., 日英）の埋め込み空間と、英語で学習したニューラルネットワークの埋め込み空間の間で写像を適用し、タスクに最適化された埋め込み層をもつ多言語モデルを実現した。
+具体的には、両埋め込み空間の英語の語彙を共有語彙とし、日本語の単語を写像した。</p>
+<p>このレポジトリは、写像部分のみを含む。実験の再現用コードは<a href="https://github.com/jyori112/task-spec">Cross-lingual model using cross-task embedding projection</a>を参照。</p>
+<p><strong>論文</strong>: <a href="https://www.aclweb.org/anthology/K19-1003/">Multilingual model using cross-task embedding projection</a></p>
+<h2 id="cross-lingual-model-using-cross-task-embedding-projection"><a href="https://github.com/jyori112/task-spec">Cross-lingual model using cross-task embedding projection</a></h2>
+<p>CoNLL2019論文の再現コード。</p>
+<p>事前学習した多言語単語分散表現（e.g., 日英）の埋め込み空間と、
+英語で学習したニューラルネットワークの埋め込み空間の間でlocally linear mapping (上記)を適用し、
+タスクに最適化された埋め込み層をもつ多言語モデルを実現した。
+具体的には、両埋め込み空間の英語の語彙を共有語彙とし、日本語の単語を写像した。</p>
+<p>実験では、文書分類タスクと評判分析タスクにおいて、計14言語で評価を行い精度向上を確認した。</p>
+<p>写像部分のコードについては<a href="https://github.com/jyori112/llm">Localliy linear mapping</a>を参照。</p>
+<p><strong>論文</strong>: <a href="https://www.aclweb.org/anthology/K19-1003/">Multilingual model using cross-task embedding projection</a></p>
+<h2 id="subword-alignment-based-cross-lingual-word-embeddings"><a href="https://github.com/jyori112/sabclwe">Subword alignment based cross-lingual word embeddings</a></h2>
+<p>CICLING2019論文の再現コード。</p>
+<p>多言語単語分散表現の学習において、異なる言語の単語間の表層アライメントを用いる。</p>
+<p>異なる言語であっても近い言語対であれば語源を同じくする単語（de: garten - en: garden）や、文化的な交流のある言語対デあれば借用語（ja: コミュニケーション - en: communication）や固有名詞（ja: バラク・オバマ - en: Barack Obama）などが存在する。
+これらの単語は言語間で意味のゆらぎが少なく、多言語単語分散表現の学習に重要な特徴となる可能性がある。
+これらを活用するために、異なる言語の単語間の表層アライメントを用いて多言語単語分散表現の学習をより高精度化する手法を構築した。</p>
+<p>具体的には、最初に学習した多言語単語分散表現を用いて対訳辞書を構築し、その対訳辞書を教師データとして表層アライメントモデルを学習した。
+この表層アライメントモデルを用いて各単語対がどれだけ表層アライメントが取れているかを計算し、そのスコアによって対訳辞書のフィルタリングを行う（表層アライメントが取れている単語のみを含む対訳辞書を構築）。
+得られた対訳辞書を教師データとして多言語単語分散表現を再学習する。</p>
+<p><strong>論文</strong>: <a href="http://www.tkl.iis.u-tokyo.ac.jp/new/uploads/publication_file/file/911/cicling2019.pdf">Unsupervised Cross-lingual Word Embeddings Based on Subword Alignment</a></p></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p></small>
+
+        
+        
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
