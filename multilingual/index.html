@@ -7,21 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    
-    <link rel="img/favicon.ico">
+    <link rel="canonical" href="http://sakuma.tech/multilingual/">
+    <link rel="../img/favicon.ico">
 
     
-    <title>Jin SAKUMA</title>
+    <title>多言語自然言語処理 - Jin SAKUMA</title>
     
 
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
     <link href='//fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
-    <link href="css/bootstrap-custom.min.css" rel="stylesheet">
-    <link href="css/base.min.css" rel="stylesheet">
-    <link href="css/cinder.min.css" rel="stylesheet">
-    <link href="css/highlight.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+    <link href="../css/highlight.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -43,7 +43,7 @@
      
 </head>
 
-<body>
+<body class="homepage" >
 
     <div class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -61,7 +61,7 @@
 
             <!-- Main title -->
 
-            <a class="navbar-brand" href=".">Jin SAKUMA</a>
+            <a class="navbar-brand" href="..">Jin SAKUMA</a>
         </div>
 
         <!-- Expanded navigation -->
@@ -71,25 +71,25 @@
                 
                 
                     <li >
-                        <a href=".">Home</a>
+                        <a href="..">Home</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="publications/">Publications</a>
+                        <a href="../publications/">Publications</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="github/">Github</a>
+                        <a href="../github/">Github</a>
                     </li>
                 
                 
                 
                     <li >
-                        <a href="multilingual">Multilingual</a>
+                        <a href=".">Multilingual</a>
                     </li>
                 
                 
@@ -108,16 +108,66 @@
 
     <div class="container">
         
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#_1">多言語自然言語処理</a></li>
+            <li class="second-level"><a href="#tldr">TL;DR</a></li>
+                
+            <li class="second-level"><a href="#_2">目次と概要</a></li>
+                
+                <li class="third-level"><a href="#_3">導入：言語間のデータ格差とモデルの言語間転用</a></li>
+                <li class="third-level"><a href="#_8">機械翻訳技術と多言語モデル</a></li>
+                <li class="third-level"><a href="#_12">多言語単語分散表現</a></li>
+                <li class="third-level"><a href="#_17">多言語モデル</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
 
-    <div class="row-fluid">
-      <div id="main-content" class="span12">
-        <h1 id="404-page-not-found" style="text-align: center">404</h1>
-        <p style="text-align: center"><strong>Page not found</strong></p>
-        <p style="text-align: center"><a href="">Home</a></p>
-      </div>
-    </div>
-
-
+<h1 id="_1">多言語自然言語処理</h1>
+<p>主に研究分野としている多言語自然言語処理分野をザクッと解説します。
+目標と現在位置、何が解けていて、何が解けていないのか？をまとめています。</p>
+<h2 id="tldr">TL;DR</h2>
+<p>機械学習技術を用いて自然言語処理タスクを解く場合、大量の言語資源（言語に関するデータ。タスクのアノテーションなど）が必要になります。
+そのような資源は言語ごとに入手する必要がありますが、実際はそのほとんどが英語などの限られた資源に限定されていて、その他ほとんどの低資源言語では高精度なモデルが活用できない状況です。
+この問題を解決するために、言語をまたいで言語資源を活用する（e.g., 英語のデータを使って日本語モデルを作る）手法が検討されています。
+そのような技術の集まりを多言語自然言語処理と言います。</p>
+<p>この目標を達成するために、複数の言語で共有した単語表現（多言語単語分散表現）やその他様々な手法が検討されていますが、低資源言語での高精度モデル獲得という大きな目標には到達できていません。</p>
+<h2 id="_2">目次と概要</h2>
+<h3 id="_3">導入：言語間のデータ格差とモデルの言語間転用</h3>
+<blockquote>
+<p>機械学習の概要と自然言語処理に機械学習を適用する場合に言語資源が必要になることを説明。現状、様々な言語でどのような資源が獲得可能かを説明することで、多言語技術の必要性を述べます。
+次に、前提知識として言語資源の種類とその活用方法について述べ、最後にモデルを言語をまたいで転用するとはどういうことか？その課題はなにか？を説明します。</p>
+</blockquote>
+<h4 id="_4">機械学習の概要</h4>
+<h4 id="_5">言語資源の言語間格差の現実</h4>
+<h4 id="_6">言語資源の分類</h4>
+<h4 id="_7">モデルの言語間転用の考え方と課題</h4>
+<h3 id="_8">機械翻訳技術と多言語モデル</h3>
+<blockquote>
+<p>多言語モデルを実現する上で最もかんたんな方法は機械翻訳技術を用いることです。ここでは、機械翻訳の概要とそれを用いた多言語モデルについて解説したあと、その問題点と未来の可能性について言及します。</p>
+</blockquote>
+<h4 id="_9">機械翻訳の概要</h4>
+<h4 id="_10">機械翻訳を用いた多言語モデル</h4>
+<h4 id="_11">機械翻訳を用いた多言語モデルの課題と未来</h4>
+<h3 id="_12">多言語単語分散表現</h3>
+<blockquote>
+<p>多くの多言語モデルの基礎となっている技術が多言語単語分散表現です。この技術について解説したあと、残された課題についてまとめます。</p>
+</blockquote>
+<h4 id="_13">多言語単語分散表現とは？</h4>
+<h4 id="_14">写像による言語間のアライメント</h4>
+<h4 id="_15">同時学習による言語間のアライメント</h4>
+<h4 id="_16">多言語単語分散表現の課題</h4>
+<h3 id="_17">多言語モデル</h3>
+<blockquote>
+<p>これまでの話を踏まえて、実際にモデルを言語をまたいで転用する方法について述べます。</p>
+</blockquote>
+<h4 id="_18">モデルの言語間転用とその分類</h4>
+<h4 id="_19">教師なし手法</h4>
+<h4 id="_20">教師あり手法</h4>
+<h4 id="_21">様々なタスクの多言語モデル</h4></div>
+        
+        
     </div>
 
     <footer class="col-md-12 text-center">
@@ -130,13 +180,13 @@
         
     </footer>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/bootstrap-3.0.3.min.js"></script>
-    <script src="js/highlight.pack.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../js/highlight.pack.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script>var base_url = ""</script>
+    <script>var base_url = ".."</script>
     
-    <script src="js/base.js"></script>
-    <script src="search/main.js"></script>
+    <script src="../js/base.js"></script>
+    <script src="../search/main.js"></script>
 
     <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -204,3 +254,8 @@
     </body>
 
 </html>
+
+<!--
+MkDocs version : 1.0.4
+Build Date UTC : 2020-01-27 10:45:43
+-->
