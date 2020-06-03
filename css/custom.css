@@ -1,0 +1,16 @@
+.sns-btn img {
+    height: 30px;
+    margin: 0 3px;
+}
+
+a.sns-btn {
+    margin: 0 2px;
+}
+
+a.sns-btn:hover {
+    text-decoration: none;
+}
+
+.navbar-right {
+    display: none;
+}
