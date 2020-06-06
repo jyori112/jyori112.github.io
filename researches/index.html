@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="canonical" href="http://jyori112.github.io/researches/">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+
+    
+    <title>Research - Jin SAKUMA</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
+    
+    <link href="../css/custom.css" rel="stylesheet">
+    <link href="../css/bootstrap-social.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            <a class="navbar-brand" href="..">Jin SAKUMA</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../publications/">Publications</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Research</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../github/">Github</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li >
+                        <a rel="prev" href="../publications/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../github/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#_1">研究紹介</a></li>
+            <li class="second-level"><a href="#_2">自然言語処理技術を幅広い言語で適用するための研究</a></li>
+                
+                <li class="third-level"><a href="#_3">多言語単語分散表現に関する研究</a></li>
+                <li class="third-level"><a href="#_5">モデルの言語間転用に関する研究</a></li>
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="_1">研究紹介</h1>
+<p>主な研究内容とその成果をまとめます。</p>
+<h2 id="_2">自然言語処理技術を幅広い言語で適用するための研究</h2>
+<p>自然言語処理分野では、深層学習等の莫大な学習データを用いた機械学習に基づく手法が高精度を発揮しています。
+しかし、これらの技術を世界中に数千以上存在する言語で適用するためには、莫大な学習データをそれぞれの言語に対して個別に収集する必要があり、現実的ではありません。
+実際、言語データを数多く収集可能な言語とそうでない言語の間でモデルの性能に大きな隔たりが見られ、自然言語処理技術の適用範囲は数少ない言語に限られています。</p>
+<p>そこで、資源の豊富な言語の学習データで学習したモデルを資源の少ない言語で適用することで、言語をまたいで学習データを活用する手法が検討されてきました。
+しかし、言語が違えば出現する単語が異なることから（「犬」は日本語でのみ、「dog」は英語でのみ出現する）、モデルをそのまま言語をまたいで適用することはできません。
+既存手法の多くは、多言語単語分散表現と呼ばれる複数の言語の単語を同じ意味空間で表現した単語埋め込みを活用することで、この問題を解決しています。</p>
+<p>そのため、より高精度な多言語単語分散表現を獲得する研究と、具体的にモデルを言語をまたいで適用する手法についての研究を行ってきました。</p>
+<h3 id="_3">多言語単語分散表現に関する研究</h3>
+<p>多言語単語分散表現の最も一般的な学習手法は、まず各言語において単語分散表現を学習し、対訳辞書を用いて同義とされている語が近くなるような線形写像を学習するものです<span class="biber-cite">（<a href="https://arxiv.org/abs/1309.4168">Mikolov+ 2013</a>, <a href="https://www.aclweb.org/anthology/N15-1104">Xing+ 2015</a>）</span>。
+しかし、多くの言語対においては対訳辞書を獲得することが困難であることも多く、また、言語間の距離が遠い場合は事前に学習した単語分散表現の性質の違いから高精度が発揮されない問題があります。</p>
+<p>この問題を解決するために、まず対訳辞書に依存せずに多言語単語分散表現を獲得する手法を構築しました。
+言語学的に近い言語間や文化的な交流の多い言語間では、語源を同じくする語や借用語など、表層の似ている単語が多く見られます。
+この手がかりを用いて、表層が似ている単語のベクトル表現を近くするように学習することで、対訳辞書に依存せずに多言語単語分散表現を獲得する手法を構築しました。</p>
+<p>しかし、この手法では文字体系の大きく異る言語対（英語と日本語など）においては効果を発揮しません。
+文字体系の異なる言語対では、単語の借用時にはその音から借用先の言語での表層を決定することが多く見られます（communication→コミュニケーションなど）。
+そこで、この借用のプロセスを文字列のアライメントとして捉えることで、様々な言語間で適用可能な手法を構築しました。</p>
+<p>これを最新の手法<span class="biber-cite">（<a href="http://www.aclweb.org/anthology/P18-1073">Artetxe+ 2018</a>）</span>と組み合わせることで、特に距離の遠い言語対において精度向上が見られることを確認しました。</p>
+<h4 id="_4">関連論文</h4>
+<ol>
+<li><a href="http://id.nii.ac.jp/1001/00183708/">表層類似性を用いた多言語単語分散表現の教師なし学習手法</a>．<strong>佐久間仁</strong>，吉永直樹．第233回 NL研（2017）</li>
+<li><a href="http://www.tkl.iis.u-tokyo.ac.jp/new/uploads/publication_file/file/911/cicling2019.pdf">Unsupervised Cross-lingual Word Embeddings Based on Subword Alignment</a>. <strong>Jin Sakuma</strong>, Naoki Yoshinaga, CICLing 2019</li>
+</ol>
+<h3 id="_5">モデルの言語間転用に関する研究</h3>
+<p>深層学習を用いた教師なし多言語モデル（目的言語での学習データや対訳資源を仮定しない）ではモデルの埋込層を多言語単語分散表現に固定して学習することで、モデルの言語間転用を可能としています。
+しかし、単語表現が学習データに対して最適化されておらず高精度を達成することが困難でした。</p>
+<p>そこで、この研究では目的言語での学習データや対訳資源に依存せず、目的言語のタスクに最適化された単語表現を持つような多言語モデルを獲得しその精度向上を図りました。
+具体的には、事前に原言語において学習したニューラルネットモデルの埋込層の意味空間に、多言語単語分散表現の目的言語の単語を写像することで、タスクに最適化された単語表現を獲得しました。</p>
+<h4 id="_6">関連論文</h4>
+<ol>
+<li><a href="https://drive.google.com/open?id=15YaMMDeQHJyzUy9E8s2KU1mxVGzpYStx">タスクに特化した多言語単語分散表現を用いた多言語モデル</a>．<strong>佐久間 仁</strong>，吉永 直樹．YANS 2018</li>
+<li><a href="http://www.tkl.iis.u-tokyo.ac.jp/new/uploads/publication_file/file/882/main.pdf">単語分散表現のタスク横断写像に基づく高精度多言語モデル</a>．<strong>佐久間 仁</strong>，吉永 直樹．NLP 2019</li>
+<li><a href="https://www.aclweb.org/anthology/K19-1003/">Multilingual model using cross-task embedding projection</a>. <strong>Jin Sakuna</strong>, Naoki Yoshinaga, CoNLL 2019</li>
+</ol></div>
+        
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        
+        <hr>
+        <p>
+        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+        </p>
+
+        
+        
+    </footer>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
