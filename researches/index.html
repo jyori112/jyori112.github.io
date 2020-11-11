@@ -60,7 +60,9 @@
 
             <!-- Main title -->
 
-            <a class="navbar-brand" href="..">Jin SAKUMA</a>
+            
+              <a class="navbar-brand" href="..">Jin SAKUMA</a>
+            
         </div>
 
         <!-- Expanded navigation -->
@@ -88,12 +90,6 @@
                 
                 
                     <li >
-                        <a href="../first/">FIRST</a>
-                    </li>
-                
-                
-                
-                    <li >
                         <a href="../github/">Github</a>
                     </li>
                 
@@ -104,6 +100,16 @@
                     <li>
                         <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
                             <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../publications/">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../github/">
+                            Next <i class="fas fa-arrow-right"></i>
                         </a>
                     </li>
             </ul>
@@ -138,7 +144,7 @@
 既存手法の多くは、多言語単語分散表現と呼ばれる複数の言語の単語を同じ意味空間で表現した単語埋め込みを活用することで、この問題を解決しています。</p>
 <p>そのため、より高精度な多言語単語分散表現を獲得する研究と、具体的にモデルを言語をまたいで適用する手法についての研究を行ってきました。</p>
 <h3 id="_3">多言語単語分散表現に関する研究</h3>
-<p>多言語単語分散表現の最も一般的な学習手法は、まず各言語において単語分散表現を学習し、対訳辞書を用いて同義とされている語が近くなるような線形写像を学習するものです[<a href="https://arxiv.org/abs/1309.4168">Mikolov+, 2013</a>; <a href="https://www.aclweb.org/anthology/N15-1104">Xing+, 2015</a>]。
+<p>多言語単語分散表現の最も一般的な学習手法は、まず各言語において単語分散表現を学習し、対訳辞書を用いて同義とされている語が近くなるような線形写像を学習するものです[cite:mikolov2013crosslingual,xing2015]。
 しかし、多くの言語対においては対訳辞書を獲得することが困難であることも多く、また、言語間の距離が遠い場合は事前に学習した単語分散表現の性質の違いから高精度が発揮されない問題があります。</p>
 <p>この問題を解決するために、まず対訳辞書に依存せずに多言語単語分散表現を獲得する手法を構築しました。
 言語学的に近い言語間や文化的な交流の多い言語間では、語源を同じくする語や借用語など、表層の似ている単語が多く見られます。
@@ -146,14 +152,14 @@
 <p>しかし、この手法では文字体系の大きく異る言語対（英語と日本語など）においては効果を発揮しません。
 文字体系の異なる言語対では、単語の借用時にはその音から借用先の言語での表層を決定することが多く見られます（communication→コミュニケーションなど）。
 そこで、この借用のプロセスを文字列のアライメントとして捉えることで、様々な言語間で適用可能な手法を構築しました。</p>
-<p>これを最新の手法[<a href="http://www.aclweb.org/anthology/P18-1073">Artetxe+, 2018</a>]と組み合わせることで、特に距離の遠い言語対において精度向上が見られることを確認しました。</p>
+<p>これを最新の手法[cite:artetxe2018unsupervised]と組み合わせることで、特に距離の遠い言語対において精度向上が見られることを確認しました。</p>
 <h4 id="_4">関連論文</h4>
 <ol>
 <li><a href="http://id.nii.ac.jp/1001/00183708/">表層類似性を用いた多言語単語分散表現の教師なし学習手法</a>．<strong>佐久間仁</strong>，吉永直樹．第233回 NL研（2017）</li>
 <li><a href="http://www.tkl.iis.u-tokyo.ac.jp/new/uploads/publication_file/file/911/cicling2019.pdf">Unsupervised Cross-lingual Word Embeddings Based on Subword Alignment</a>. <strong>Jin Sakuma</strong>, Naoki Yoshinaga, CICLing 2019</li>
 </ol>
 <h3 id="_5">モデルの言語間転用に関する研究</h3>
-<p>深層学習を用いた教師なし多言語モデル（目的言語での学習データや対訳資源を仮定しない）ではモデルの埋込層を多言語単語分散表現に固定して学習することで、モデルの言語間転用を可能としています[<a href="http://www.aclweb.org/anthology/E17-1084">Duong+, 2017</a>]。
+<p>深層学習を用いた教師なし多言語モデル（目的言語での学習データや対訳資源を仮定しない）ではモデルの埋込層を多言語単語分散表現に固定して学習することで、モデルの言語間転用を可能としています[cite:duong2017]。
 しかし、単語表現が学習データに対して最適化されておらず高精度を達成することが困難でした。</p>
 <p>そこで、この研究では目的言語での学習データや対訳資源に依存せず、目的言語のタスクに最適化された単語表現を持つような多言語モデルを獲得しその精度向上を図りました。
 具体的には、事前に原言語において学習したニューラルネットモデルの埋込層の意味空間に、多言語単語分散表現の目的言語の単語を写像することで、タスクに最適化された単語表現を獲得しました。</p>
@@ -165,24 +171,25 @@
 </ol>
 <hr />
 <h2 id="_7">参考文献</h2>
-<p><span class="biber-ref"><span class="biber-ref-index">[Artetxe+, 2018]</span> <span class="biber-ref-author">Mikel Artetxe, Gorka Labaka, Eneko Agirre</span>. <span class="biber-ref-year">2018</span>. <span class="biber-ref-title" markdown="1"><a href="http://www.aclweb.org/anthology/P18-1073">A robust self-learning method for fully unsupervised cross-lingual mappings of word embeddings</a></span>. <span class="biber-booktitle">In <em>ACL</em></span>.<br>
-<span class="biber-ref-index">[Duong+, 2017]</span> <span class="biber-ref-author">Long Duong, Hiroshi Kanayama, Tengfei Ma, Steven Bird, Trevor Cohn</span>. <span class="biber-ref-year">2017</span>. <span class="biber-ref-title" markdown="1"><a href="http://www.aclweb.org/anthology/E17-1084">Multilingual Training of Crosslingual Word Embeddings</a></span>. <span class="biber-booktitle">In <em>EACL</em></span>, <span class="biber-pages">pages 894--904</span><br>
-<span class="biber-ref-index">[Mikolov+, 2013]</span> <span class="biber-ref-author">Tomas Mikolov, Quoc V Le, Ilya Sutskever</span>. <span class="biber-ref-year">2013</span>. <span class="biber-ref-title" markdown="1"><a href="https://arxiv.org/abs/1309.4168">Exploiting Similarities among Languages for Machine Translation</a></span>. <span class="biber-journal"><em>arXiv:1309.4168</em></span>.<br>
-<span class="biber-ref-index">[Xing+, 2015]</span> <span class="biber-ref-author">Chao Xing, Dong Wang, Chao Liu, Yiye Lin</span>. <span class="biber-ref-year">2015</span>. <span class="biber-ref-title" markdown="1"><a href="https://www.aclweb.org/anthology/N15-1104">Normalized Word Embedding and Orthogonal Transform for Bilingual Word Translation</a></span>. <span class="biber-booktitle">In <em>NAACL</em></span>, <span class="biber-pages">pages 1006--1011</span></span></p></div>
+<p>[references]</p></div>
         
         
     </div>
 
-    <footer class="col-md-12 text-center">
-        
-        <hr>
-        <p>
-        <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
-        </p>
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
 
-        
-        
-    </footer>
+          
+          
+      </footer>
+    
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="../js/bootstrap-3.0.3.min.js"></script>
 

@@ -21,6 +21,10 @@ a.sns-btn:hover {
     text-decoration: none;
 }
 
+.navbar-right {
+    display: none;
+}
+
 .biber-cite {
     font-size: 80%;
 }
