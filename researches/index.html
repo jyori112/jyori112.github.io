@@ -150,7 +150,7 @@
 既存手法の多くは、多言語単語分散表現と呼ばれる複数の言語の単語を同じ意味空間で表現した単語埋め込みを活用することで、この問題を解決しています。</p>
 <p>そのため、より高精度な多言語単語分散表現を獲得する研究と、具体的にモデルを言語をまたいで適用する手法についての研究を行ってきました。</p>
 <h3 id="_3">多言語単語分散表現に関する研究</h3>
-<p>多言語単語分散表現の最も一般的な学習手法は、まず各言語において単語分散表現を学習し、対訳辞書を用いて同義とされている語が近くなるような線形写像を学習するものです[cite:mikolov2013crosslingual,xing2015]。
+<p>多言語単語分散表現の最も一般的な学習手法は、まず各言語において単語分散表現を学習し、対訳辞書を用いて同義とされている語が近くなるような線形写像を学習するものです[^1][^2]。
 しかし、多くの言語対においては対訳辞書を獲得することが困難であることも多く、また、言語間の距離が遠い場合は事前に学習した単語分散表現の性質の違いから高精度が発揮されない問題があります。</p>
 <p>この問題を解決するために、まず対訳辞書に依存せずに多言語単語分散表現を獲得する手法を構築しました。
 言語学的に近い言語間や文化的な交流の多い言語間では、語源を同じくする語や借用語など、表層の似ている単語が多く見られます。
@@ -158,7 +158,7 @@
 <p>しかし、この手法では文字体系の大きく異る言語対（英語と日本語など）においては効果を発揮しません。
 文字体系の異なる言語対では、単語の借用時にはその音から借用先の言語での表層を決定することが多く見られます（communication→コミュニケーションなど）。
 そこで、この借用のプロセスを文字列のアライメントとして捉えることで、様々な言語間で適用可能な手法を構築しました。</p>
-<p>これを最新の手法[cite:artetxe2018unsupervised]と組み合わせることで、特に距離の遠い言語対において精度向上が見られることを確認しました。</p>
+<p>これを最新の手法[^3]と組み合わせることで、特に距離の遠い言語対において精度向上が見られることを確認しました。</p>
 <h4 id="_4">関連論文</h4>
 <ol>
 <li><a href="http://id.nii.ac.jp/1001/00183708/">表層類似性を用いた多言語単語分散表現の教師なし学習手法</a>．<strong>佐久間仁</strong>，吉永直樹．第233回 NL研（2017）</li>
@@ -177,7 +177,9 @@
 </ol>
 <hr />
 <h2 id="_7">参考文献</h2>
-<p>[references]</p></div>
+<p>[^1]: Tomas Mikolov, Quoc V Le, and Ilya Sutskever. Exploiting similarities among languages for machine translation. <em>arXiv:1309.4168</em>, 2013. URL: <a href="https://arxiv.org/abs/1309.4168">https://arxiv.org/abs/1309.4168</a>.</p>
+<p>[^2]: Chao Xing, Dong Wang, Chao Liu, and Yiye Lin. Normalized word embedding and orthogonal transform for bilingual word translation. In <em>NAACL</em>, 1006–1011. 2015. URL: <a href="https://www.aclweb.org/anthology/N15-1104">https://www.aclweb.org/anthology/N15-1104</a>, <a href="https://doi.org/10.3115/v1/N15-1104">doi:10.3115/v1/N15-1104</a>.</p>
+<p>[^3]: Mikel Artetxe, Gorka Labaka, and Eneko Agirre. A robust self-learning method for fully unsupervised cross-lingual mappings of word embeddings. In <em>ACL</em>. 2018. URL: <a href="http://www.aclweb.org/anthology/P18-1073">http://www.aclweb.org/anthology/P18-1073</a>, <a href="https://doi.org/10.18653/v1/P18-1073">doi:10.18653/v1/P18-1073</a>.</p></div>
         
         
     </div>
